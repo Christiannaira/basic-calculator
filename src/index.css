@@ -26,3 +26,16 @@ body {
   background-color: #222;
 
 }
+
+.result_container {
+
+  height: 200px;
+  max-width: 100%;
+  background-color: #fff;
+
+}
+
+.calculator_value_input {
+
+  cursor: pointer;
+}
