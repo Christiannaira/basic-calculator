@@ -1,11 +1,12 @@
 import { useState } from "react";
 
 
-function CalcInput({inputValue}) {
+function CalcInput({inputValue, setNumber, numbers, setNumbers}) {
 
   const handleCLick = () => {
 
-      alert(inputValue + 2);
+      // setNumber(inputValue);
+      setNumbers(numbers + inputValue);
 
   }
 
@@ -23,6 +24,8 @@ function CalcInput({inputValue}) {
 
 function App() {
 
+  const [number, setNumber] = useState(0)
+  const [numbers, setNumbers] = useState("");
   const [firstNumber, setFirstNumber] = useState(null);
   const [secondNumber, setSecondNumber] = useState(null);
   const [operator, setOperator] = useState(null);
@@ -36,19 +39,24 @@ function App() {
 
         <div className="result_container">
 
-        
+        {numbers}
 
         </div>
 
-        <CalcInput inputValue={1}/>
-        <CalcInput inputValue={2}/>
-        <CalcInput inputValue={3}/>
-        <CalcInput inputValue={4}/>
-        <CalcInput inputValue={5}/>
-        <CalcInput inputValue={6}/>
-        <CalcInput inputValue={7}/>
-        <CalcInput inputValue={8}/>
-        <CalcInput inputValue={9}/>
+        <div className="value_inputs_container">
+
+          <CalcInput inputValue={1} setNumber={setNumber} numbers={numbers} setNumbers={setNumbers}/>
+          <CalcInput inputValue={2} setNumber={setNumber} numbers={numbers} setNumbers={setNumbers}/>
+          <CalcInput inputValue={3} setNumber={setNumber} numbers={numbers} setNumbers={setNumbers}/>
+          <CalcInput inputValue={4} setNumber={setNumber} numbers={numbers} setNumbers={setNumbers}/>
+          <CalcInput inputValue={5} setNumber={setNumber} numbers={numbers} setNumbers={setNumbers}/>
+          <CalcInput inputValue={6} setNumber={setNumber} numbers={numbers} setNumbers={setNumbers}/>
+          <CalcInput inputValue={7} setNumber={setNumber} numbers={numbers} setNumbers={setNumbers}/>
+          <CalcInput inputValue={8} setNumber={setNumber} numbers={numbers} setNumbers={setNumbers}/>
+          <CalcInput inputValue={9} setNumber={setNumber} numbers={numbers} setNumbers={setNumbers}/>
+
+
+        </div>
 
       </div>
 

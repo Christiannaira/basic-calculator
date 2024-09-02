@@ -36,6 +36,13 @@ body {
 }
 
 .calculator_value_input {
-
+  padding: 20px;
   cursor: pointer;
+  background-color: #f1f1f1;
+}
+
+.value_inputs_container {
+
+    display: flex;
+
 }
